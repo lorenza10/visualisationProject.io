@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>LGB+ Stats</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="piechart.js" charset="utf-8"></script>
+    <script src="http://d3js.org/d3.v3.js" charset="utf-8"></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="index.html">Home</a></li>
+                        <li><a href="linechart.html">Line Charts</a></li>
+                        <li><a href="bubblechart.html">Bubble Chart</a></li>
+                        <li><a href="region.html">Bar Charts</a></li>
+                        <li><a href="men&women.html">Pie Charts</a></li>
+                    </ul>
+                </div>
+            </div>
+    </nav>
+
+    <body onload="javascript:updateData7()">
+        <h1>Data for women</h1>
+        <div id="option">
+            <input name="updateButton" type="button" value="Women 2012" onclick="updateData7()" />
+        </div>
+        <div id="option2">
+            <input name="updateButton2" type="button" value="Women 2013" onclick="updateData8()" />
+        </div>
+        <div id="option3">
+            <input name="updateButton3" type="button" value="Women 2014" onclick="updateData9()" />
+        </div>
+        <div id="option4">
+            <input name="updateButton4" type="button" value="Women 2015" onclick="updateData10()" />
+        </div>
+        <div id="option2">
+            <input name="updateButton5" type="button" value="Women 2016" onclick="updateData11()" />
+        </div>
+        <div id="option2">
+            <input name="updateButton6" type="button" value="Women 2017" onclick="updateData12()" />
+        </div>
+        <svg width="500" height="400"></svg>
+        <br>
+
+    </body>
+
+</html>
