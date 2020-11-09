@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <title>LGB+ Stats - Age Statistics</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="http://d3js.org/d3.v3.js" charset="utf-8"></script>
+    <script src="https://d3js.org/d3.v3.js" charset="utf-8"></script>
     <script src="https://d3js.org/d3.v4.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -58,8 +58,8 @@
     </div>
 
     <script type="text/javascript">
-        d3.csv('csv/age/age_g&l.csv', function (error, data) {
-            data.forEach(function (d) {
+        d3.csv('csv/age/age_g&l.csv', function(error, data) {
+            data.forEach(function(d) {
                 d.year = +d.year;
                 d.column1 = +d.column1;
                 d.column2 = +d.column2;
@@ -69,18 +69,31 @@
             });
 
             var chart = makeLineChart(data, 'year', {
-                '16-24': { column: 'column1' },
-                '25-34': { column: 'column2' },
-                '35-49': { column: 'column3' },
-                '50-64': { column: 'column4' },
-                '65+': { column: 'column5' }
-            }, { xAxis: 'Age Group', yAxis: 'Thousands' });
+                '16-24': {
+                    column: 'column1'
+                },
+                '25-34': {
+                    column: 'column2'
+                },
+                '35-49': {
+                    column: 'column3'
+                },
+                '50-64': {
+                    column: 'column4'
+                },
+                '65+': {
+                    column: 'column5'
+                }
+            }, {
+                xAxis: 'Age Group',
+                yAxis: 'Thousands'
+            });
             chart.bind("#chart-line1");
             chart.render();
         });
 
-        d3.csv('csv/age/age_bisexual.csv', function (error, data) {
-            data.forEach(function (d) {
+        d3.csv('csv/age/age_bisexual.csv', function(error, data) {
+            data.forEach(function(d) {
                 d.year = +d.year;
                 d.column1 = +d.column1;
                 d.column2 = +d.column2;
@@ -90,19 +103,32 @@
             });
 
             var chart2 = makeLineChart(data, 'year', {
-                '16-24': { column: 'column1' },
-                '25-34': { column: 'column2' },
-                '35-49': { column: 'column3' },
-                '50-64': { column: 'column4' },
-                '65+': { column: 'column5' }
-            }, { xAxis: 'Age Group', yAxis: 'Thousands' });
+                '16-24': {
+                    column: 'column1'
+                },
+                '25-34': {
+                    column: 'column2'
+                },
+                '35-49': {
+                    column: 'column3'
+                },
+                '50-64': {
+                    column: 'column4'
+                },
+                '65+': {
+                    column: 'column5'
+                }
+            }, {
+                xAxis: 'Age Group',
+                yAxis: 'Thousands'
+            });
             chart2.bind("#chart-line2");
             chart2.render();
 
         });
 
-        d3.csv('csv/age/age_other.csv', function (error, data) {
-            data.forEach(function (d) {
+        d3.csv('csv/age/age_other.csv', function(error, data) {
+            data.forEach(function(d) {
                 d.year = +d.year;
                 d.column1 = +d.column1;
                 d.column2 = +d.column2;
@@ -112,19 +138,32 @@
             });
 
             var chart3 = makeLineChart(data, 'year', {
-                '16-24': { column: 'column1' },
-                '25-34': { column: 'column2' },
-                '35-49': { column: 'column3' },
-                '50-64': { column: 'column4' },
-                '65+': { column: 'column5' }
-            }, { xAxis: 'Age Group', yAxis: 'Thousands' });
+                '16-24': {
+                    column: 'column1'
+                },
+                '25-34': {
+                    column: 'column2'
+                },
+                '35-49': {
+                    column: 'column3'
+                },
+                '50-64': {
+                    column: 'column4'
+                },
+                '65+': {
+                    column: 'column5'
+                }
+            }, {
+                xAxis: 'Age Group',
+                yAxis: 'Thousands'
+            });
             chart3.bind("#chart-line3");
             chart3.render();
 
         });
 
-        d3.csv('csv/age/age_all.csv', function (error, data) {
-            data.forEach(function (d) {
+        d3.csv('csv/age/age_all.csv', function(error, data) {
+            data.forEach(function(d) {
                 d.year = +d.year;
                 d.gl1 = +d.gl1;
                 d.gl2 = +d.gl2;
@@ -144,22 +183,55 @@
             });
 
             var chart4 = makeLineChart(data, 'year', {
-                'G&L 16-24': { column: 'gl1' },
-                'G&L 25-34': { column: 'gl2' },
-                'G&L 35-49': { column: 'gl3' },
-                'G&L 50-64': { column: 'gl4' },
-                'G&L 65+': { column: 'gl5' },
-                'Bi 16-24': { column: 'gl1' },
-                'Bi 25-34': { column: 'gl2' },
-                'Bi 35-49': { column: 'gl3' },
-                'Bi 50-64': { column: 'gl4' },
-                'Bi 65+': { column: 'gl5' },
-                'Other 16-24': { column: 'gl1' },
-                'Other 25-34': { column: 'gl2' },
-                'Other 35-49': { column: 'gl3' },
-                'Other 50-64': { column: 'gl4' },
-                'Other 65+': { column: 'gl5' }
-            }, { xAxis: 'Age Group', yAxis: 'Thousands' });
+                'G&L 16-24': {
+                    column: 'gl1'
+                },
+                'G&L 25-34': {
+                    column: 'gl2'
+                },
+                'G&L 35-49': {
+                    column: 'gl3'
+                },
+                'G&L 50-64': {
+                    column: 'gl4'
+                },
+                'G&L 65+': {
+                    column: 'gl5'
+                },
+                'Bi 16-24': {
+                    column: 'gl1'
+                },
+                'Bi 25-34': {
+                    column: 'gl2'
+                },
+                'Bi 35-49': {
+                    column: 'gl3'
+                },
+                'Bi 50-64': {
+                    column: 'gl4'
+                },
+                'Bi 65+': {
+                    column: 'gl5'
+                },
+                'Other 16-24': {
+                    column: 'gl1'
+                },
+                'Other 25-34': {
+                    column: 'gl2'
+                },
+                'Other 35-49': {
+                    column: 'gl3'
+                },
+                'Other 50-64': {
+                    column: 'gl4'
+                },
+                'Other 65+': {
+                    column: 'gl5'
+                }
+            }, {
+                xAxis: 'Age Group',
+                yAxis: 'Thousands'
+            });
             chart4.bind("#chart-line4");
             chart4.render();
 
