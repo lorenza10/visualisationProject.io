@@ -37,47 +37,50 @@
         </div>
     </nav>
 
-    <body onload="javascript:updateData(),updateData8()">
+    <body onload="javascript:getIDMen('men2012'),getIDWomen('women2012')">
         <h1>Data for men</h1>
         <div class=box>
             <div class="men">
                 <div id="men-option1">
-                    <input name="updateButton" class="btn btn-secondary btn-lg" type="button" value="Men 2012" onclick="updateData()" />
+                    <input name="updateButton" id="men2012" class="btn btn-secondary btn-lg" type="button" value="Men 2012" onclick="getIDMen('men2012')" />
                 </div>
                 <div id="option2">
-                    <input name="updateButton2" id="men2013" class="btn btn-secondary btn-lg" type="button" value="men2013" onclick="getId('men2013')" />
+                    <input name="updateButton2" id="men2013" class="btn btn-secondary btn-lg" type="button" value="Men 2013" onclick="getIDMen('men2013')" />
                 </div>
                 <div id="option3">
-                    <input name="updateButton3" class="btn btn-secondary btn-lg" type="button" value="Men 2014" onclick="updateData3()" />
+                    <input name="updateButton3" id="men2014" class="btn btn-secondary btn-lg" type="button" value="Men 2014" onclick="getIDMen('men2014')" />
                 </div>
                 <div id="option4 ">
-                    <input name="updateButton4" class="btn btn-secondary btn-lg" type="button" value="Men 2015" onclick="updateData4()" />
+                    <input name="updateButton4" id="men2015" class="btn btn-secondary btn-lg" type="button" value="Men 2015" onclick="getIDMen('men2015')" />
                 </div>
                 <div id="option2 ">
-                    <input name="updateButton5" class="btn btn-secondary btn-lg" type="button" value="Men 2016" onclick="updateData5()" />
+                    <input name="updateButton5" id="men2016" class="btn btn-secondary btn-lg" type="button" value="Men 2016" onclick="getIDMen('men2016')" />
                 </div>
                 <div id="option2 ">
-                    <input name="updateButton6" class="btn btn-secondary btn-lg" type="button" value="Men 2017" onclick="updateData6()" />
+                    <input name="updateButton6" id="men2017" class="btn btn-secondary btn-lg" type="button" value="Men 2017" onclick="getIDMen('men2017')" />
                 </div>
-                <svg width="500 " height="400 " id="svgmen"></svg>
-                <svg width="500 " height="400 " id="svgwomen"></svg>
+                <svg width="500" height="400" id="svgmen"></svg>
+                <svg width="500" height="400" id="svgwomen"></svg>
             </div>
-            <div class="women ">
+            <div class="women">
                 <h1>Data for women</h1>
                 <div id="option2 ">
-                    <input name="updateButton8" type="button" value="Women 2013" onclick="updateData8()" />
+                    <input name="updateButton7" id="women2012" class="btn btn-secondary btn-lg" type="button" value="Women 2012" onclick="getIDWomen('women2012')" />
+                </div>
+                <div id="option2 ">
+                    <input name="updateButton8" id="women2013" class="btn btn-secondary btn-lg" type="button" value="Women 2013" onclick="getIDWomen('women2013')" />
                 </div>
                 <div id="option3 ">
-                    <input name="updateButton9 " type="button " value="Women 2014 " onclick="updateData9() " />
+                    <input name="updateButton9" id="women2014" class="btn btn-secondary btn-lg" type="button" value="Women 2014" onclick="getIDWomen('women2014')" />
                 </div>
                 <div id="option4 ">
-                    <input name="updateButton10 " type="button " value="Women 2015 " onclick="updateData10() " />
+                    <input name="updateButton10" id="women2015" class="btn btn-secondary btn-lg" type="button" value="Women 2015" onclick="getIDWomen('women2015')" />
                 </div>
                 <div id="option2 ">
-                    <input name="updateButton11 " type="button " value="Women 2016 " onclick="updateData11() " />
+                    <input name="updateButton11" id="women2016" class="btn btn-secondary btn-lg" type="button" value="Women 2016" onclick="getIDWomen('women2016')" />
                 </div>
                 <div id="option2 ">
-                    <input name="updateButton12 " type="button " value="Women 2017 " onclick="updateData12() " />
+                    <input name="updateButton12" id="women2017" class="btn btn-secondary btn-lg" type="button" value="Women 2017" onclick="getIDWomen('women2017')" />
                 </div>
 
             </div>
