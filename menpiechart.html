@@ -37,27 +37,51 @@
         </div>
     </nav>
 
-    <body onload="javascript:updateData()">
+    <body onload="javascript:updateData(),updateData8()">
         <h1>Data for men</h1>
-        <div id="option">
-            <input name="updateButton" type="button" value="Men 2012" onclick="updateData()" />
+        <div class=box>
+            <div class="men">
+                <div id="men-option1">
+                    <input name="updateButton" class="btn btn-secondary btn-lg" type="button" value="Men 2012" onclick="updateData()" />
+                </div>
+                <div id="option2">
+                    <input name="updateButton2" id="men2013" class="btn btn-secondary btn-lg" type="button" value="men2013" onclick="getId('men2013')" />
+                </div>
+                <div id="option3">
+                    <input name="updateButton3" class="btn btn-secondary btn-lg" type="button" value="Men 2014" onclick="updateData3()" />
+                </div>
+                <div id="option4 ">
+                    <input name="updateButton4" class="btn btn-secondary btn-lg" type="button" value="Men 2015" onclick="updateData4()" />
+                </div>
+                <div id="option2 ">
+                    <input name="updateButton5" class="btn btn-secondary btn-lg" type="button" value="Men 2016" onclick="updateData5()" />
+                </div>
+                <div id="option2 ">
+                    <input name="updateButton6" class="btn btn-secondary btn-lg" type="button" value="Men 2017" onclick="updateData6()" />
+                </div>
+                <svg width="500 " height="400 " id="svgmen"></svg>
+                <svg width="500 " height="400 " id="svgwomen"></svg>
+            </div>
+            <div class="women ">
+                <h1>Data for women</h1>
+                <div id="option2 ">
+                    <input name="updateButton8" type="button" value="Women 2013" onclick="updateData8()" />
+                </div>
+                <div id="option3 ">
+                    <input name="updateButton9 " type="button " value="Women 2014 " onclick="updateData9() " />
+                </div>
+                <div id="option4 ">
+                    <input name="updateButton10 " type="button " value="Women 2015 " onclick="updateData10() " />
+                </div>
+                <div id="option2 ">
+                    <input name="updateButton11 " type="button " value="Women 2016 " onclick="updateData11() " />
+                </div>
+                <div id="option2 ">
+                    <input name="updateButton12 " type="button " value="Women 2017 " onclick="updateData12() " />
+                </div>
+
+            </div>
         </div>
-        <div id="option2">
-            <input name="updateButton2" type="button" value="Men 2013" onclick="updateData2()" />
-        </div>
-        <div id="option3">
-            <input name="updateButton3" type="button" value="Men 2014" onclick="updateData3()" />
-        </div>
-        <div id="option4">
-            <input name="updateButton4" type="button" value="Men 2015" onclick="updateData4()" />
-        </div>
-        <div id="option2">
-            <input name="updateButton5" type="button" value="Men 2016" onclick="updateData5()" />
-        </div>
-        <div id="option2">
-            <input name="updateButton6" type="button" value="Men 2017" onclick="updateData6()" />
-        </div>
-        <svg width="500" height="400"></svg>
         <br>
 
     </body>
