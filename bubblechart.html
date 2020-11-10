@@ -31,7 +31,7 @@
                     <li><a href="linechart.html">Line Charts</a></li>
                     <li><a href="bubblechart.html">Bubble Chart</a></li>
                     <li><a href="region.html">Bar Charts</a></li>
-                    <li><a href="men&women.html">Pie Charts</a></li>
+                    <li><a href="piechart.html">Pie Charts</a></li>
                 </ul>
             </div>
         </div>
@@ -48,11 +48,11 @@
         <div class="divBubbleChart" id="chart2"><svg></svg></div>
     </div>
     <div>
-            <h2>Average of sexual minority for male and female respondents</h2>
+        <h2>Average of sexual minority for male and female respondents</h2>
     </div>
     <div class="divBubbleChart" id="chart3"><svg></svg></div>
     <script>
-        d3.csv('csv/age/age_average_old.csv', function (error, data) {
+        d3.csv('csv/age/age_average_old.csv', function(error, data) {
             if (error) {
                 console.error('Error getting or parsing the data.');
                 throw error;
@@ -61,7 +61,7 @@
             d3.select('#chart').datum(data).call(chart);
         });
 
-        d3.csv('csv/regions/regions_average.csv', function (error, data) {
+        d3.csv('csv/regions/regions_average.csv', function(error, data) {
             if (error) {
                 console.error('Error getting or parsing the data.');
                 throw error;
@@ -70,7 +70,7 @@
             d3.select('#chart2').datum(data).call(chart);
         });
 
-        d3.csv('csv/men&women/men&women.csv', function (error, data) {
+        d3.csv('csv/men&women/men&women.csv', function(error, data) {
             if (error) {
                 console.error('Error getting or parsing the data.');
                 throw error;
