@@ -8,7 +8,7 @@ function getID(id) {
     string_id = btn_id.replace(/[0-9]/g, '');
     svg_title = "#svg" + string_id;
     chart_title = document.getElementById(id).value
-    clearChart()
+    clearChart();
     updateData();
 }
 

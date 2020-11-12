@@ -4,10 +4,18 @@ function getID(id) {
 
     btn_id = document.getElementById(id).id;
     string_id = btn_id.replace(/[0-9]/g, '');
-    svg_title = "#svg" + string_id;
+    svg_name = document.getElementById(id).name
+    svg_title = "#svg" + svg_name;
+    console.log(svg_title)
     chart_title = document.getElementById(id).value + " respondents"
     console.log(chart_title)
+    clearChart();
     updateData();
+}
+
+function clearChart() {
+    svg = d3.select(svg_title);
+    svg.selectAll("*").remove();
 }
 
 function reload() {
@@ -16,7 +24,7 @@ function reload() {
 }
 
 function updateData() {
-    var svg = d3.select("svg"),
+    var svg = d3.select(svg_title),
         margin = 200,
         width = svg.attr("width") - margin,
         height = svg.attr("height") - margin;
