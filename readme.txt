@@ -1,1 +1,0 @@
-To start the server enter "python -m http.server" into the command line
