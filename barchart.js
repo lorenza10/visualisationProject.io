@@ -1,5 +1,15 @@
 // From https://www.tutorialsteacher.com/d3js/animated-bar-chart-d3
 
+function getID(id) {
+
+    btn_id = document.getElementById(id).id;
+    string_id = btn_id.replace(/[0-9]/g, '');
+    svg_title = "#svg" + string_id;
+    chart_title = document.getElementById(id).value + " respondents"
+    console.log(chart_title)
+    updateData();
+}
+
 function reload() {
     location.reload();
 
@@ -16,7 +26,7 @@ function updateData() {
         .attr("x", 50)
         .attr("y", 50)
         .attr("font-size", "24px")
-        .text("Gay and lesbian respondents")
+        .text(chart_title)
 
     var x = d3.scaleBand().range([0, width]).padding(0.4),
         y = d3.scaleLinear().range([height, 0]);
@@ -24,7 +34,11 @@ function updateData() {
     var g = svg.append("g")
         .attr("transform", "translate(" + 100 + "," + 100 + ")");
 
-    d3.csv("csv/regions/regions_gl.csv", function(error, data) {
+
+    var csv_path = "csv/regions/regions_" + btn_id + ".csv"
+    console.log(csv_path)
+
+    d3.csv(csv_path, function(error, data) {
         if (error) {
             throw error;
         }

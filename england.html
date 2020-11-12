@@ -46,17 +46,17 @@
             <input name="updateButton" type="button" value="Refresh" onclick="reload()" />
         </div>
         <div id="option">
-            <input name="updateButton" type="button" value="Gay and Lesbian" onclick="updateData()" />
+            <input name="updateButton" id="gl" type="button" value="Gay and Lesbian" onclick="getID('gl')" />
         </div>
         <div id="option2">
-            <input name="updateButton2" type="button" value="Bisexual" onclick="updateData2()" />
+            <input name="updateButton2" id="bi" type="button" value="Bisexual" onclick="getID('bi')" />
         </div>
         <div id="option3">
-            <input name="updateButton3" type="button" value="Other" onclick="updateData3()" />
+            <input name="updateButton3" id="other" type="button" value="Other" onclick="getID('other')" />
         </div>
         <br>
         <div>
-            <svg width="800" height="800"></svg>
+            <svg width="800" height="800" id="svgEngland"></svg>
         </div>
     </body>
 
