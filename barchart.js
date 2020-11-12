@@ -3,6 +3,8 @@
 document.addEventListener("DOMContentLoaded", function() {
     getID('gl');
     getID('gl_scot');
+    getID('gl_ni');
+    getID('gl_wales');
 });
 
 function getID(id) {
@@ -46,7 +48,6 @@ function updateData() {
 
     var g = svg.append("g")
         .attr("transform", "translate(" + 100 + "," + 100 + ")");
-
 
     var csv_path = "csv/regions/regions_" + btn_id + ".csv"
     console.log(csv_path)

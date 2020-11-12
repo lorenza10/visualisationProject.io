@@ -41,7 +41,14 @@
     <body>
         <div>
             <h1>Region Statistics</h1>
-            <h2>England</h2>
+            <h2>Jump to region</h2>
+            <div id="text-centre">
+                <a href="#england"><input style="text-decoration:none" name="england" class="btn btn-secondary btn-lg" type="button" value="England" /></a>
+                <a href="#scotland"><input name="scotland" class="btn btn-secondary btn-lg" type="button" value="Scotland" /></a>
+                <a href="#ni"><input name="ni" class="btn btn-secondary btn-lg" type="button" value="Northern Ireland" /></a>
+                <a href="#wales"><input name="wales" class="btn btn-secondary btn-lg" type="button" value="Wales" /></a>
+            </div>
+            <h2 id="england">England</h2>
             <h3>Hover over the bars for exact numbers</h3>
             <div id="text-centre">
                 <input name="england" class="btn btn-secondary btn-lg" id="gl" type="button" value="Gay and Lesbian" onclick="getID('gl')" />
@@ -53,7 +60,7 @@
             </div>
         </div>
         <div>
-            <h2>Scotland</h2>
+            <h2 id="scotland">Scotland</h2>
             <div id="text-centre">
                 <input name="scotland" class="btn btn-secondary btn-lg" id="gl_scot" type="button" value="Gay and Lesbian" onclick="getID('gl_scot')" />
                 <input name="scotland" class="btn btn-secondary btn-lg" id="bi_scot" type="button" value="Bisexual" onclick="getID('bi_scot')" />
@@ -61,6 +68,28 @@
             </div>
             <div class="center">
                 <svg width="800" height="800" id="svgscotland"></svg>
+            </div>
+        </div>
+        <div>
+            <h2 id="ni">Northern Ireland</h2>
+            <div id="text-centre">
+                <input name="ni" class="btn btn-secondary btn-lg" id="gl_ni" type="button" value="Gay and Lesbian" onclick="getID('gl_ni')" />
+                <input name="ni" class="btn btn-secondary btn-lg" id="bi_ni" type="button" value="Bisexual" onclick="getID('bi_ni')" />
+                <input name="ni" class="btn btn-secondary btn-lg" id="other_ni" type="button" value="Other" onclick="getID('other_ni')" />
+            </div>
+            <div class="center">
+                <svg width="800" height="800" id="svgni"></svg>
+            </div>
+        </div>
+        <div>
+            <h2 id="wales">Wales</h2>
+            <div id="text-centre">
+                <input name="wales" class="btn btn-secondary btn-lg" id="gl_wales" type="button" value="Gay and Lesbian" onclick="getID('gl_wales')" />
+                <input name="wales" class="btn btn-secondary btn-lg" id="bi_wales" type="button" value="Bisexual" onclick="getID('bi_wales')" />
+                <input name="wales" class="btn btn-secondary btn-lg" id="other_wales" type="button" value="Other" onclick="getID('other_wales')" />
+            </div>
+            <div class="center">
+                <svg width="800" height="800" id="svgwales"></svg>
             </div>
         </div>
         <footer>
