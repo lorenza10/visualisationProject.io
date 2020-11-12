@@ -39,46 +39,53 @@
     <div>
         <h1>Averages of LGB+ data</h1>
     </div>
-    <div>
-        <h2>Average of age group for each year</h2>
-        <div class="divBubbleChart" id="chart"><svg></svg></div>
-    </div>
-    <div>
-        <h2>Average of each region for all years</h2>
-        <div class="divBubbleChart" id="chart2"><svg></svg></div>
-    </div>
-    <div>
-        <h2>Average of sexual minority for male and female respondents</h2>
-    </div>
-    <div class="divBubbleChart" id="chart3"><svg></svg></div>
-    <script>
-        d3.csv('csv/age/age_average_old.csv', function(error, data) {
-            if (error) {
-                console.error('Error getting or parsing the data.');
-                throw error;
-            }
-            var chart = bubbleChart().width(600).height(400);
-            d3.select('#chart').datum(data).call(chart);
-        });
+    <h2>Hover over the bars for exact numbers</h>
+        <h2>Jump to section</h2>
+        <div id="text-centre">
+            <a href="#age"><input name="age" class="btn btn-secondary btn-lg" type="button" value="Age group average" /></a>
+            <a href="#region"><input name="region" class="btn btn-secondary btn-lg" type="button" value="Region average" /></a>
+            <a href="#gender"><input name="gender" class="btn btn-secondary btn-lg" type="button" value="Gender average" /></a>
+        </div>
+        <div>
+            <h2 id="age">Average of age group for each year</h2>
+            <div class="divBubbleChart" id="chart"><svg></svg></div>
+        </div>
+        <div>
+            <h2 id="region">Average of each region for all years</h2>
+            <div class="divBubbleChart" id="chart2"><svg></svg></div>
+        </div>
+        <div>
+            <h2 id="gender">Average of sexual minority for male and female respondents</h2>
+        </div>
+        <div class="divBubbleChart" id="chart3"><svg></svg></div>
+        <script>
+            d3.csv('csv/age/age_average_old.csv', function(error, data) {
+                if (error) {
+                    console.error('Error getting or parsing the data.');
+                    throw error;
+                }
+                var chart = bubbleChart().width(600).height(400);
+                d3.select('#chart').datum(data).call(chart);
+            });
 
-        d3.csv('csv/regions/regions_average.csv', function(error, data) {
-            if (error) {
-                console.error('Error getting or parsing the data.');
-                throw error;
-            }
-            var chart = bubbleChart().width(600).height(400);
-            d3.select('#chart2').datum(data).call(chart);
-        });
+            d3.csv('csv/regions/regions_average.csv', function(error, data) {
+                if (error) {
+                    console.error('Error getting or parsing the data.');
+                    throw error;
+                }
+                var chart = bubbleChart().width(600).height(400);
+                d3.select('#chart2').datum(data).call(chart);
+            });
 
-        d3.csv('csv/men&women/men&women.csv', function(error, data) {
-            if (error) {
-                console.error('Error getting or parsing the data.');
-                throw error;
-            }
-            var chart = bubbleChart().width(600).height(400);
-            d3.select('#chart3').datum(data).call(chart);
-        });
-    </script>
+            d3.csv('csv/gender/men&women.csv', function(error, data) {
+                if (error) {
+                    console.error('Error getting or parsing the data.');
+                    throw error;
+                }
+                var chart = bubbleChart().width(600).height(400);
+                d3.select('#chart3').datum(data).call(chart);
+            });
+        </script>
 </body>
 
 </html>

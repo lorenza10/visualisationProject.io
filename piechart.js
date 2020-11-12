@@ -52,7 +52,7 @@ function updateData() {
         .outerRadius(radius)
         .innerRadius(radius - 80);
 
-    var csv_path = "csv/men&women/" + string_id + "/" + btn_id + ".csv"
+    var csv_path = "csv/gender/" + btn_id + ".csv"
 
     d3.csv(csv_path, function(error, data) {
         if (error) {
