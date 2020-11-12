@@ -1,3 +1,7 @@
+document.addEventListener("DOMContentLoaded", function() {
+    getID('women2012');
+});
+
 function getID(id) {
 
     btn_id = document.getElementById(id).id;
