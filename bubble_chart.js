@@ -43,7 +43,6 @@ function bubbleChart() {
             .style("width", "400px")
             .text("");
 
-
         var simulation = d3.forceSimulation(data)
             .force("charge", d3.forceManyBody().strength([forceApart]))
             .force("x", d3.forceX())
@@ -51,7 +50,7 @@ function bubbleChart() {
             .on("tick", ticked);
 
         function ticked(e) {
-            node.attr("transform", function (d) {
+            node.attr("transform", function(d) {
                 return "translate(" + [d.x + (width / 2), d.y + ((height + marginTop) / 2)] + ")";
             });
         }
@@ -59,17 +58,16 @@ function bubbleChart() {
         var colorCircles;
         if (!customColors) {
             colorCircles = d3.scaleOrdinal(d3.schemeCategory10);
-        }
-        else {
+        } else {
             colorCircles = d3.scaleOrdinal()
                 .domain(customDomain)
                 .range(customRange);
         }
 
-        var minRadiusDomain = d3.min(data, function (d) {
+        var minRadiusDomain = d3.min(data, function(d) {
             return +d[columnForRadius];
         });
-        var maxRadiusDomain = d3.max(data, function (d) {
+        var maxRadiusDomain = d3.max(data, function(d) {
             return +d[columnForRadius];
         });
         var scaleRadius = d3.scaleLinear()
@@ -84,57 +82,57 @@ function bubbleChart() {
             .style('opacity', 1);
 
         node.append("circle")
-            .attr("id", function (d, i) {
+            .attr("id", function(d, i) {
                 return i;
             })
-            .attr('r', function (d) {
+            .attr('r', function(d) {
                 return scaleRadius(d[columnForRadius]);
             })
-            .style("fill", function (d) {
+            .style("fill", function(d) {
                 return colorCircles(d[columnForColors]);
             })
-            .on("mouseover", function (d) {
+            .on("mouseover", function(d) {
                 tooltip.html(d[columnForTitle] + "<br/>" + d[columnForColors] + "<br/>" + d[columnForRadius] + " " + unitName);
                 return tooltip.style("visibility", "visible");
             })
-            .on("mousemove", function () {
+            .on("mousemove", function() {
                 return tooltip.style("top", (d3.event.pageY - 10) + "px").style("left", (d3.event.pageX + 10) + "px");
             })
-            .on("mouseout", function () {
+            .on("mouseout", function() {
                 return tooltip.style("visibility", "hidden");
             });
         node.append("clipPath")
-            .attr("id", function (d, i) {
+            .attr("id", function(d, i) {
                 return "clip-" + i;
             })
             .append("use")
-            .attr("xlink:href", function (d, i) {
+            .attr("xlink:href", function(d, i) {
                 return "#" + i;
             });
         if (showTitleOnCircle) {
             node.append("text")
-                .attr("clip-path", function (d, i) {
+                .attr("clip-path", function(d, i) {
                     return "url(#clip-" + i + ")"
                 })
                 .attr("text-anchor", "middle")
                 .append("tspan")
-                .attr("x", function (d) {
+                .attr("x", function(d) {
                     return 0;
                 })
-                .attr("y", function (d) {
+                .attr("y", function(d) {
                     return ".3em";
                 })
-                .text(function (d) {
+                .text(function(d) {
                     return d[columnForTitle];
                 })
-                .on("mouseover", function (d) {
+                .on("mouseover", function(d) {
                     tooltip.html(d[columnForTitle] + "<br/>" + d[columnForColors] + "<br/>" + d[columnForRadius] + " " + unitName);
                     return tooltip.style("visibility", "visible");
                 })
-                .on("mousemove", function () {
+                .on("mousemove", function() {
                     return tooltip.style("top", (d3.event.pageY - 10) + "px").style("left", (d3.event.pageX + 10) + "px");
                 })
-                .on("mouseout", function () {
+                .on("mouseout", function() {
                     return tooltip.style("visibility", "hidden");
                 });
         }
@@ -272,10 +270,9 @@ function bubbleChart() {
                 .transition()
                 .duration(500)
 
-                .style("opacity", "0")
+            .style("opacity", "0")
                 .remove();
-        }
-        else {
+        } else {
             chartSVG.selectAll("g")
                 .style("opacity", 1)
                 .duration(500)
