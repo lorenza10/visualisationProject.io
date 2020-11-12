@@ -165,68 +165,67 @@
         d3.csv('csv/age/age_all.csv', function(error, data) {
             data.forEach(function(d) {
                 d.year = +d.year;
-                d.gl1 = +d.gl1;
-                d.gl2 = +d.gl2;
-                d.gl3 = +d.gl3;
-                d.gl4 = +d.gl4;
-                d.gl5 = +d.gl5;
-                d.bi1 = +d.bi1;
-                d.bi2 = +d.bi2;
-                d.bi3 = +d.bi3;
-                d.bi4 = +d.bi4;
-                d.bi5 = +d.bi5;
-                d.o1 = +d.o1;
-                d.o2 = +d.o2;
-                d.o3 = +d.o3;
-                d.o4 = +d.o4;
-                d.o5 = +d.o5;
+                d.column1 = +d.column1;
+                d.column2 = +d.column2;
+                d.column4 = +d.column4;
+                d.column5 = +d.column5;
+                d.column6 = +d.column6;
+                d.column7 = +d.column7;
+                d.column8 = +d.column8;
+                d.column9 = +d.column9;
+                d.column10 = +d.column10;
+                d.column11 = +d.column11;
+                d.column12 = +d.column12;
+                d.column13 = +d.column13;
+                d.column14 = +d.column14;
+                d.column15 = +d.column15;
             });
 
             var chart4 = makeLineChart(data, 'year', {
                 'G&L 16-24': {
-                    column: 'gl1'
+                    column: 'column1'
                 },
                 'G&L 25-34': {
-                    column: 'gl2'
+                    column: 'column2'
                 },
                 'G&L 35-49': {
-                    column: 'gl3'
+                    column: 'column3'
                 },
                 'G&L 50-64': {
-                    column: 'gl4'
+                    column: 'column4'
                 },
                 'G&L 65+': {
-                    column: 'gl5'
+                    column: 'column5'
                 },
                 'Bi 16-24': {
-                    column: 'gl1'
+                    column: 'column6'
                 },
                 'Bi 25-34': {
-                    column: 'gl2'
+                    column: 'column7'
                 },
                 'Bi 35-49': {
-                    column: 'gl3'
+                    column: 'column8'
                 },
                 'Bi 50-64': {
-                    column: 'gl4'
+                    column: 'column9'
                 },
                 'Bi 65+': {
-                    column: 'gl5'
+                    column: 'column10'
                 },
                 'Other 16-24': {
-                    column: 'gl1'
+                    column: 'column11'
                 },
                 'Other 25-34': {
-                    column: 'gl2'
+                    column: 'column12'
                 },
                 'Other 35-49': {
-                    column: 'gl3'
+                    column: 'column13'
                 },
                 'Other 50-64': {
-                    column: 'gl4'
+                    column: 'column14'
                 },
                 'Other 65+': {
-                    column: 'gl5'
+                    column: 'column15'
                 }
             }, {
                 xAxis: 'Age Group',
