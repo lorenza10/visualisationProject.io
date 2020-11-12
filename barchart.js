@@ -2,6 +2,7 @@
 
 document.addEventListener("DOMContentLoaded", function() {
     getID('gl');
+    getID('gl_scot');
 });
 
 function getID(id) {
